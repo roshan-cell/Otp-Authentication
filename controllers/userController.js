@@ -12,7 +12,7 @@ const signUp  = async(req ,res) => {
       });
 
       if (user) return res.status(400).send("User already exist !!");
-      const OTP = otpGenerator.generate(3 , {
+      const OTP = otpGenerator.generate(6 , {
           digits: true , specialChars: false , lowerCaseAlphabets: false , upperCaseAlphabets: false
       });
       const number = req.body.number 
